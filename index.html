@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バーチャル八十八か所巡礼</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="video-background video-container">
+    <div class="slideshow-container">
+      <div class="slide fade ">
+        <img src="サムネ1.jpg" style="width:100%">
+      </div>
+      <div class="slide fade">
+        <img src="サムネ2.jpg" style="width:100%">
+      </div>
+      <div class="slide fade">
+        <img src="サムネ3.jpg" style="width:100%">
+      </div>
+      <div class="slide fade">
+        <img src="サムネ4.jpg" style="width:100%">
+      </div>
+      <div class="slide fade">
+        <img src="サムネ6.jpg" style="width:100%">
+      </div>
+      <div class="slide fade">
+        <img src="サムネ７.jpg" style="width:100%">
+      </div>
+    </div>
+
+    <img src="タイトル.png" alt="Your Image" class="overlay-image">
+    
+    <img src="矢印.png" class=" animated-image" alt="動く画像">
+    <!-- ハンバーガーメニューアイコン -->
+    <div class="hamburger-menu ovelay-image">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- メニュー項目 -->
+    <nav class="navbar ovlay-image">
+      <ul>
+        <li><a href="#概要">概要</a></li>
+        <li><a href="#pickup">pickup</a></li>
+        <li><a href="#map">参拝図</a></li>
+        <li><a href="#霊場">おすすめ霊場</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div>
+    <img src="どこ.png" alt="" width="100%" id="概要">
+  </div>
+
+  <div class="images-container" id="pickup">
+    <div class="top-right-text">Pickup</div>
+    <div class="image-item">
+      <a href="#pickup1"><img src="pickup1.png" alt="画像1"></a>
+      <div class="text-overlay1">南蔵院</div>
+    </div>
+    <div class="image-item">
+      <a href="#pickup2"><img src="pickup3.png" alt="画像2"></a>
+      <div class="text-overlay2">山王寺</div>
+    </div>
+    <div class="image-item">
+      <a href="#pickup3"><img src="pickup2.png" alt="画像3"></a>
+      <div class="text-overlay3">野見山観音</div>
+    </div>
+  </div>
+  
+
+
+  
+  <div class="main-image-container" id="map">
+    <img src="image2.jpg" alt="メインイラスト">
+    <div class="overlay-image-container">
+      <!-- カウンターを表示する場所 -->
+      <div id="click-counter">
+        <img src="足跡.png" alt="イラスト" style="width: 90px; height: 90px;">
+      </div>
+
+      <div class="hover-image-container">
+        <img src="west.jpg" alt="元の画像" class="original-image" id="west-map">
+        <div class="hover-image">
+          <img src="westmap.png" alt="ホバー時の画像">
+          <div class="small-images-container">
+            <a href="1-33.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="33.png" class="small-image" alt="小さな画像1" id="small-image1">
+            </a>
+            <a href="1-21.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="21.png" class="small-image" alt="小さな画像2" id="small-image2">
+            </a>
+            <a href="1-28.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="28.png" class="small-image" alt="小さな画像3" id="small-image3">
+            </a>
+            <a href="1-32.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="32.png" class="small-image " alt="小さな画像4" id="s-image4">
+            </a>
+            <a href="1-84.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="84.png" class="small-image" alt="小さな画像5" id="small-image5">
+            </a>
+            <a href="1-37.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="37.png" class="small-image" alt="小さな画像6" id="small-image6">
+            </a>
+            <a href="1-51.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="51.png" class="small-image small-image-7" alt="小さな画像7" id="small-image7">
+            </a>
+            <a href="1-54.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="54.png" class="small-image" alt="小さな画像8" id="small-image8">
+            </a>
+            <a href="1-69.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="69.png" class="small-image" alt="小さな画像9" id="small-image9">
+            </a>
+            <a href="1-79.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="79.png" class="small-image" alt="小さな画像10" id="small-image10">
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="east-image-container">
+      <div class="hover-image-container">
+        <img src="east.png" alt="元の画像" class="original-image">
+        <div class="hover-image">
+          <img src="eastmap.png" alt="ホバー時の画像">
+          <div class="small-images-container">
+            <a href="1-72.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="72.png" class="small-image " alt="小さな画像1" id="s-image72">
+            </a>
+            <a href="1-71.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="71.png" class="small-image " alt="小さな画像1" id="s-image71">
+            </a>
+            <a href="1-74.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="74.png" class="small-image " alt="小さな画像1" id="s-image74">
+            </a>
+            <a href="1-13.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="13.png" class="small-image " alt="小さな画像1" id="s-image13">
+            </a>
+            <a href="1-6.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="6.png" class="small-image " alt="小さな画像1" id="s-image6">
+            </a>
+            <a href="1-53.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="53.png" class="small-image " alt="小さな画像1" id="s-image53">
+            </a>
+            <a href="1-3.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="3.png" class="small-image " alt="小さな画像1" id="s-image3">
+            </a>
+            <a href="1-55.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="55.png" class="small-image " alt="小さな画像1" id="s-image55">
+            </a>
+            <a href="1-22.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="22.png" class="small-image " alt="小さな画像1" id="s-image22">
+            </a>
+            <a href="1-1.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="1.png" class="small-image " alt="小さな画像1" id="s-image1">
+            </a>
+            <a href="1-31.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="31.png" class="small-image " alt="小さな画像1" id="s-image31">
+            </a>
+            <a href="1-56.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="56.png" class="small-image " alt="小さな画像1" id="s-image56">
+            </a>
+            <a href="1-2.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="2.png" class="small-image " alt="小さな画像1" id="s-image2">
+            </a>
+            <a href="1-60.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="60.png" class="small-image " alt="小さな画像1" id="s-image60">
+            </a>
+            <a href="1-81.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="81.png" class="small-image " alt="小さな画像1" id="s-image81">
+            </a>
+            <a href="1-75.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="75.png" class="small-image " alt="小さな画像1" id="s-image75">
+            </a>
+            <a href="1-45.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="45.png" class="small-image " alt="小さな画像1" id="s-image45">
+            </a>
+            <a href="1-58.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="58.png" class="small-image " alt="小さな画像1" id="s-image58">
+            </a>
+            <a href="1-88.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="88.png" class="small-image " alt="小さな画像1" id="s-image88">
+            </a>
+            <a href="1-34.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="34.png" class="small-image " alt="小さな画像1" id="s-image34">
+            </a>
+            <a href="1-50.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="50.png" class="small-image " alt="小さな画像1" id="s-image50">
+            </a>
+            <a href="1-85.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="85.png" class="small-image " alt="小さな画像1" id="s-image85">
+            </a>
+            <a href="1-12.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="12.png" class="small-image " alt="小さな画像1" id="s-image12">
+            </a>
+            <a href="1-5.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="5.png" class="small-image " alt="小さな画像1" id="s-image5">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="north-image-container">
+      <div class="hover-image-container">
+        <img src="north.png" alt="元の画像" class="original-image">
+        <div class="hover-image">
+          <img src="northmap.png" alt="ホバー時の画像">
+          <div class="kita-images-container">
+            <a href="1-87.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="87.png" class="small-image " alt="小さな画像1" id="small-image87">
+            </a>
+            <a href="1-27.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="27.png" class="small-image " alt="小さな画像1" id="small-image27">
+            </a>
+            <a href="1-4.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="4.png" class="small-image " alt="小さな画像1" id="small-image4">
+            </a>
+            <a href="1-35.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="35.png" class="small-image " alt="小さな画像1" id="small-image35">
+            </a>
+            <a href="1-86.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="86.png" class="small-image " alt="小さな画像1" id="small-image86">
+            </a>
+            <a href="1-40.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="40.png" class="small-image " alt="小さな画像1" id="small-image40">
+            </a>
+            <a href="1-66.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="66.png" class="small-image " alt="小さな画像1" id="small-image66">
+            </a>
+            <a href="1-15.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="15.png" class="small-image " alt="小さな画像1" id="small-image15">
+            </a>
+            <a href="1-70.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="70.png" class="small-image " alt="小さな画像1" id="small-image70">
+            </a>
+            <a href="1-49.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="49.png" class="small-image " alt="小さな画像1" id="small-image49">
+            </a>
+            <a href="1-47.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="47.png" class="small-image " alt="小さな画像1" id="small-image47">
+            </a>
+            <a href="1-76.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="76.png" class="small-image " alt="小さな画像1" id="small-image76">
+            </a>
+            <a href="1-36.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="36_1.png" class="small-image " alt="小さな画像1" id="small-image36">
+            </a>
+            <a href="1-16.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="16.png" class="small-image " alt="小さな画像1" id="small-image16">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="south-image-container">
+      <div class="hover-image-container">
+        <img src="south.png" alt="元の画像" class="original-image">
+        <div class="hover-image">
+          <img src="southmap.png" alt="ホバー時の画像">
+          <div class="south-images-container">
+            <a href="1-62.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="62.png" class="south-image " alt="小さな画像1" id="s-image62">
+            </a>
+            <a href="1-18.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="18.png" class="south-image " alt="小さな画像1" id="s-image18">
+            </a>
+            <a href="1-19.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="19.png" class="south-image " alt="小さな画像1" id="s-image19">
+            </a>
+            <a href="1-39.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="39.png" class="south-image " alt="小さな画像1" id="s-image39">
+            </a>
+            <a href="1-77.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="77.png" class="south-image small-image-77" alt="小さな画像1" id="s-image77">
+            </a>
+            <a href="1-9.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="9.png" class="south-image " alt="小さな画像1" id="s-image9">
+            </a>
+            <a href="1-23.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="23.png" class="south-image " alt="小さな画像1" id="s-image23">
+            </a>
+            <a href="1-41.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="41.png" class="south-image " alt="小さな画像1" id="s-image41">
+            </a>
+            <a href="1-38.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="38.png" class="south-image " alt="小さな画像1" id="s-image38">
+            </a>
+            <a href="1-68.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="68.png" class="south-image " alt="小さな画像1" id="s-image68">
+            </a>
+            <a href="1-46.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="46.png" class="south-image " alt="小さな画像1" id="s-image46">
+            </a>
+            <a href="1-8.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="8.png" class="south-image " alt="小さな画像1" id="s-image8">
+            </a>
+            <a href="1-10.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="10.png" class="south-image " alt="小さな画像1" id="s-image10">
+            </a>
+            <a href="1-26.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="26.png" class="south-image " alt="小さな画像1" id="s-image26">
+            </a>
+            <a href="1-64.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="64.png" class="south-image " alt="小さな画像1" id="s-image64">
+            </a>
+            <a href="1-29.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="29.png" class="south-image " alt="小さな画像1" id="s-image29">
+            </a>
+            <a href="1-46.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="46.png" class="south-image " alt="小さな画像1" id="s-image46">
+            </a>
+            <a href="1-63.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="63.png" class="south-image " alt="小さな画像1" id="s-image63">
+            </a>
+            <a href="1-83.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="83.png" class="south-image " alt="小さな画像1" id="s-image83">
+            </a>
+            <a href="1-65.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="65.png" class="south-image " alt="小さな画像1" id="s-image65">
+            </a>
+            <a href="1-42.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="42_1.png" class="south-image " alt="小さな画像1" id="s-image42">
+            </a>
+            <a href="1-24.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="24.png" class="south-image " alt="小さな画像1" id="s-image24">
+            </a>
+            <a href="1-48.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="48.png" class="south-image " alt="小さな画像1" id="s-image48">
+            </a>
+            <a href="1-14.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="14.png" class="south-image " alt="小さな画像1" id="s-image14">
+            </a>
+            <a href="1-30.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="30.png" class="south-image " alt="小さな画像1" id="s-image30">
+            </a>
+            <a href="1-57.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="57.png" class="south-image " alt="小さな画像1" id="s-image57">
+            </a>
+            <a href="1-7.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="7.png" class="south-image " alt="小さな画像1" id="s-image7">
+            </a>
+            <a href="1-80.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="80.png" class="south-image " alt="小さな画像1" id="s-image80">
+            </a>
+            <a href="1-59.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="59.png" class="south-image " alt="小さな画像1" id="s-image59">
+            </a>
+            <a href="1-78.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="78.png" class="south-image " alt="小さな画像1" id="s-image78">
+            </a>
+            <a href="1-52.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="52.png" class="south-image " alt="小さな画像1" id="s-image52">
+            </a>
+            <a href="1-11.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="11.png" class="south-image " alt="小さな画像1" id="s-image11">
+            </a>
+            <a href="1-17.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="17.png" class="south-image " alt="小さな画像1" id="s-image17">
+            </a>
+            <a href="1-82.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="82.png" class="south-image " alt="小さな画像1" id="s-image82">
+            </a>
+            <a href="1-25.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="25.png" class="south-image " alt="小さな画像1" id="s-image25">
+            </a>
+            <a href="1-43.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="43.png" class="south-image " alt="小さな画像1" id="s-image43">
+            </a>
+            <a href="1-42.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="42.png" class="south-image " alt="小さな画像1" id="s-image44">
+            </a>
+            <a href="1-73.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="73.png" class="south-image " alt="小さな画像1" id="s-image73">
+            </a>
+            <a href="1-61.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="61.png" class="south-image " alt="小さな画像1" id="s-image61">
+            </a>
+            <a href="1-20.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="20.png" class="south-image " alt="小さな画像1" id="s-image20">
+            </a>
+            <a href="1-67.html" class="image-link" onclick="imageClicked(this)" data-image-id="image1">
+              <img src="67.png" class="south-image " alt="小さな画像1" id="s-image67">
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="a" id="霊場">
+    <div id="pickup1">
+      <a href="1-60.html"><img src="南蔵院3.png"></a>
+    </div>
+  </div>
+  <div class="bc">
+    <div id="pickup2">
+      <a href="1-61.html"><img src="山王寺2.png"></a>
+    </div>
+    <div id="pickup3">
+      <a href="1-16.html"><img src="野見山観音2.png"></a>
+    </div>
+  </div>
+
+  <footer>
+    <img src="footer.png" alt="" width="100%">
+  </footer>
+
+  <script src="script.js"></script>
+
+
+  </div>
+
+
+</body>
+
+</html>

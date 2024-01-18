@@ -1,0 +1,910 @@
+/* ----------全体------------------------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F1EFEB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------- */
+/* -------------videoとhとp----------------------- */
+h1 {
+  font-size: 36px;
+  /* フォントサイズを大きくする */
+  font-family: 'Yu Mincho', 'YuMincho', '游明朝', serif;
+  /* 游明朝フォントを指定 */
+  text-align: center;
+  font-weight: 410;
+  /* より細いフォントスタイル */
+  margin: 30px 10px 0;
+}
+
+.video {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  /* コンテンツを中央に配置 */
+
+}
+
+.video iframe {
+  width: 1000px;
+  /* 動画の幅 */
+  height: 450px;
+  /* 動画の高さ */
+}
+
+p {
+  font-size: 25px;
+  /* フォントサイズを大きくする */
+  font-family: 'Yu Mincho', 'YuMincho', '游明朝', serif;
+  /* 游明朝フォントを指定 */
+  text-align: center;
+  font-weight: 410;
+  /* より細いフォントスタイル */
+  max-width: 800px;
+  margin: 20px auto;
+  /* 上下のマージンを0にし、左右のマージンを自動に設定して中央揃えに */
+  text-align: justify;
+}
+
+/* -------------------------------------------------- */
+/* -------------buttun-------------------------------------- */
+
+.buttons-container {
+  display: flex;
+  /* Flexboxを使用 */
+  justify-content: space-around;
+  /* 各ボタンの間に均等なスペースを設置 */
+  width: 100%;
+  /* コンテナの幅をページ全体に設定 */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.buttons-container a,
+.buttons-container button {
+  flex: 1;
+  /* Flexboxによる均等な幅の割り当て */
+  text-align: center;
+  /* テキストを中央揃え */
+}
+
+.customButton {
+  width: 100%;
+  /* ボタンの幅を親要素に合わせる */
+  padding: 10px;
+  /* ボタン内のパディング */
+  /* その他のスタイリング（フォント、色、ボーダーなど） */
+}
+
+#new-image {
+  width: 30%;
+  /* 望ましい幅 */
+  height: auto;
+  /* 画像の縦横比を維持 */
+  position: absolute;
+  top: -550px;
+  left: 450px;
+}
+
+.customButton {
+  padding: 5px 20px;
+  /* 内側の余白を調整 */
+  font-size: 30px;
+  /* フォントサイズ */
+  color: white;
+  /* 文字色 */
+  background-color: #474141;
+  /* 背景色 */
+  border: 1px solid white;
+  /* ボーダーの色と太さ */
+  cursor: pointer;
+  /* カーソルをポインタにする */
+  font-family: 'Yu Mincho', 'YuMincho', '游明朝', serif;
+  text-transform: uppercase;
+  /* 文字を大文字にする */
+  letter-spacing: 2px;
+  /* 文字の間隔を広げる */
+}
+
+.customButton:hover {
+  background-color: #666;
+  /* ホバー時の背景色 */
+}
+
+/* ---------------------------------------------- */
+
+
+
+
+
+.small-images-container {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 22%;
+}
+
+.small-image:hover {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+
+
+
+
+
+
+.hover-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.hover-image {
+  width: 26%;
+  height: auto;
+  /* 画像の縦横比を維持 */
+  position: absolute;
+  top: -490px;
+  left: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+
+
+
+
+.image-link {
+  margin-bottom: 10px;
+}
+
+.small-image {
+  transition: transform 0.3s ease;
+}
+
+.changed-color {
+  filter: sepia(100%);
+  /* または好みの色変更効果 */
+}
+
+.image-clicked {
+  opacity: 0.5;
+  /* 透明度を設定 */
+}
+
+#click-counter {
+  font-size: 24px;
+  /* 例として24ピクセルに設定 */
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+
+
+.main-image-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+
+}
+
+.main-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-small-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.overlay-image-container {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.eastmap-image{
+  width: 35%;
+}
+
+/* ---east------------------- */
+
+#s-image72 {
+  position: absolute;
+  top: 180px;
+  left: 10px;
+  width: 60%;
+}
+
+#s-image74 {
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  width: 50%;
+}
+
+#s-image71 {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  width: 50%;
+}
+
+#s-image13 {
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  width: 70%;
+}
+
+#s-image6 {
+  position: absolute;
+  top: -10px;
+  left: 50px;
+  width: 70%;
+}
+
+#s-image3 {
+  position: absolute;
+  top: 140px;
+  left: 100px;
+  width: 50%;
+}
+
+#s-image1 {
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  width: 50%;
+}
+
+#s-image56 {
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  width: 70%;
+}
+
+#s-image31 {
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  width: 70%;
+}
+
+#s-image53 {
+  position: absolute;
+  top: 250px;
+  left: 90px;
+  width: 100%;
+}
+
+#s-image55 {
+  position: absolute;
+  top: 325px;
+  left: 90px;
+  width: 100%;
+}
+
+#s-image22 {
+  position: absolute;
+  top: 300px;
+  left: 190px;
+  width: 80%;
+}
+
+#s-image2 {
+  position: absolute;
+  top: 200px;
+  left: 170px;
+  width: 50%;
+}
+
+#s-image60 {
+  position: absolute;
+  top: 130px;
+  left: 170px;
+  width: 90%;
+}
+
+#s-image81 {
+  position: absolute;
+  top: 140px;
+  left: 260px;
+  width: 70%;
+}
+
+#s-image75 {
+  position: absolute;
+  top: 70px;
+  left: 210px;
+  width: 50%;
+}
+
+#s-image45 {
+  position: absolute;
+  top: 80px;
+  left: 170px;
+  width: 65%;
+}
+
+#s-image34 {
+  position: absolute;
+  top: 50px;
+  left: 230px;
+  width: 70%;
+}
+
+#s-image50 {
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  width: 40%;
+}
+
+#s-image5 {
+  position: absolute;
+  top: -20px;
+  left: 250px;
+  width: 80%;
+}
+
+#s-image12 {
+  position: absolute;
+  top: -50px;
+  left: 180px;
+  width: 70%;
+}
+
+#s-image88 {
+  position: absolute;
+  top: -10px;
+  left: 130px;
+  width: 70%;
+}
+
+#s-image58 {
+  position: absolute;
+  top: 40px;
+  left: 130px;
+  width: 60%;
+}
+
+#s-image85 {
+  position: absolute;
+  top: 10px;
+  left: 180px;
+  width: 60%;
+}
+/* ------------------------ */
+
+
+/* --------west--------- */
+#small-image1 {
+  position: absolute;
+  top: 10px;
+  /* 上からの位置 */
+  left: 20px;
+  /* 左からの位置 */
+}
+
+#small-image2 {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+}
+
+#small-image3 {
+  position: absolute;
+  top: 220px;
+  /* 上からの位置 */
+  left: 150px;
+  /* 左からの位置 */
+}
+
+#s-image4 {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+#small-image5 {
+  position: absolute;
+  top: 200px;
+  /* 上からの位置 */
+  left: 220px;
+  /* 左からの位置 */
+}
+
+#small-image6 {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+}
+
+
+
+#small-image7 {
+  position: absolute;
+  top: 180px;
+  /* 上からの位置 */
+  left: 80px;
+  /* 左からの位置 */
+}
+
+#small-image8 {
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+
+#small-image9 {
+  position: absolute;
+  top: -20px;
+  /* 上からの位置 */
+  left: 120px;
+  /* 左からの位置 */
+}
+
+#small-image10 {
+  position: absolute;
+  top: 250px;
+  left: 70px;
+}
+/* --------------------------- */
+
+/* -------north---------------- */
+
+.hover-image2 {
+  width: 50%;
+  height: auto;
+  /* 画像の縦横比を維持 */
+  position: absolute;
+  top: -310px;
+  left: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.kita {
+  position: absolute;
+  top: 0px;
+  left: -80px;
+}
+
+.kita-images-container {
+  position: absolute;
+  top: -30px;
+  left: -60px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 18%;
+}
+
+.kita-image:hover {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+
+
+#small-image87 {
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  width: 70%;
+}
+
+#small-image86 {
+  position: absolute;
+  top: 200px;
+  left: 70px;
+  width: 50%;
+}
+
+#small-image4 {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  width: 50%;
+}
+
+#small-image35 {
+  position: absolute;
+  top: 200px;
+  left: 130px;
+  width: 50%;
+}
+
+#small-image15 {
+  position: absolute;
+  top: 120px;
+  left: 160px;
+  width: 50%;
+}
+
+#small-image66 {
+  position: absolute;
+  top: 70px;
+  left: 110px;
+  width: 40%;
+}
+
+#small-image27 {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  width: 50%;
+}
+
+#small-image70 {
+  position: absolute;
+  top: 160px;
+  left: 370px;
+  width: 60%;
+}
+
+#small-image49 {
+  position: absolute;
+  top: 40px;
+  left: 280px;
+  width: 50%;
+}
+
+#small-image47 {
+  position: absolute;
+  top: 80px;
+  left: 370px;
+  width: 60%;
+}
+
+#small-image76 {
+  position: absolute;
+  top: 60px;
+  left: 440px;
+  width: 40%;
+}
+
+#small-image36 {
+  position: absolute;
+  top: 100px;
+  left: 620px;
+  width: 50%;
+}
+
+#small-image16 {
+  position: absolute;
+  top: 50px;
+  left: 650px;
+  width: 50%;
+}
+
+/* ----south------- */
+
+.hover-image3 {
+  width: 26%;
+  height: auto;
+  /* 画像の縦横比を維持 */
+  position: absolute;
+  top: -420px;
+  left: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+
+img.minami {
+  width: 550px; /* 例：幅を500ピクセルに設定 */
+  height: auto; /* 高さを自動調整（アスペクト比を保持） */
+}
+
+.south-image-container {
+  position: absolute;
+  top: 260px;
+  left: 330px;
+  width: 170%;
+}
+
+.south-images-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: auto;
+  
+}
+
+.south-image {
+  transition: transform 0.3s ease;
+}
+
+.south-image:hover {
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+
+#s-image62 {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 230%;
+}
+#s-image18{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 230%;
+}
+#s-image19{
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 230%;
+}
+#s-image39{
+  position: absolute;
+  top: 50px;
+  left: 110px;
+  width: 230%;
+}
+
+#s-image77{
+  position: absolute;
+  top: 70px;
+  left: 160px;
+  width: 350%;
+}
+#s-image9{
+  position: absolute;
+  top: 60px;
+  left: 230px;
+  width: 230%;
+}
+#s-image23{
+  position: absolute;
+  top: 160px;
+  left: 190px;
+  width: 230%;
+}
+#s-image41{
+  position: absolute;
+  top: 190px;
+  left: 160px;
+  width: 230%;
+}
+
+#s-image38{
+  position: absolute;
+  top: 240px;
+  left: 170px;
+  width: 230%;
+}
+#s-image68{
+  position: absolute;
+  top: 245px;
+  left: 215px;
+  width: 220%;
+}
+#s-image46{
+  position: absolute;
+  top: 240px;
+  left: 250px;
+  width: 230%;
+}
+#s-image8{
+  position: absolute;
+  top: 260px;
+  left: 140px;
+  width: 230%;
+}
+#s-image10{
+  position: absolute;
+  top: 260px;
+  left: 170px;
+  width: 300%;
+}
+#s-image26{
+  position: absolute;
+  top: 320px;
+  left: 170px;
+  width: 230%;
+}
+#s-image64{
+  position: absolute;
+  top: 320px;
+  left: 200px;
+  width: 230%;
+}
+#s-image29{
+  position: absolute;
+  top: 320px;
+  left: 240px;
+  width: 280%;
+}
+
+#s-image63{
+  position: absolute;
+  top: 310px;
+  left: 280px;
+  width: 300%;
+}
+#s-image83{
+  position: absolute;
+  top: 280px;
+  left: 320px;
+  width: 300%;
+}
+#s-image65{
+  position: absolute;
+  top: 315px;
+  left: 370px;
+  width: 230%;
+}
+#s-image42{
+  position: absolute;
+  top: 220px;
+  left: 300px;
+  width: 300%;
+}
+#s-image24{
+  position: absolute;
+  top: 220px;
+  left: 355px;
+  width: 280%;
+}
+#s-image48{
+  position: absolute;
+  top: 160px;
+  left: 365px;
+  width: 230%;
+}
+#s-image14{
+  position: absolute;
+  top: 190px;
+  left: 320px;
+  width: 230%;
+}
+#s-image30{
+  position: absolute;
+  top: 260px;
+  left: 380px;
+  width: 230%;
+}
+#s-image57{
+  position: absolute;
+  top: 180px;
+  left: 400px;
+  width: 230%;
+}
+#s-image7{
+  position: absolute;
+  top: 280px;
+  left: 450px;
+  width: 300%;
+}
+#s-image80{
+  position: absolute;
+  top: 220px;
+  left: 430px;
+  width: 400%;
+}
+#s-image59{
+  position: absolute;
+  top: 170px;
+  left: 465px;
+  width: 330%;
+}
+#s-image78{
+  position: absolute;
+  top: 80px;
+  left: 455px;
+  width: 230%;
+  z-index: 1;
+}
+#s-image52{
+  position: absolute;
+  top: 40px;
+  left: 420px;
+  width: 270%;
+}
+#s-image11{
+  position: absolute;
+  top: 25px;
+  left: 365px;
+  width: 230%;
+}
+#s-image17{
+  position: absolute;
+  top: 110px;
+  left: 390px;
+  width: 280%;
+}
+#s-image82{
+  position: absolute;
+  top: 55px;
+  left: 310px;
+  width: 330%;
+}
+#s-image25{
+  position: absolute;
+  top: 0px;
+  left: 390px;
+  width: 330%;
+}
+#s-image43{
+  position: absolute;
+  top: 5px;
+  left: 320px;
+  width: 280%;
+}
+#s-image44{
+  position: absolute;
+  top: 20px;
+  left: 260px;
+  width: 230%;
+}
+#s-image73{
+  position: absolute;
+  top: 110px;
+  left: 250px;
+  width: 230%;
+}
+#s-image61{
+  position: absolute;
+  top: 130px;
+  left: 290px;
+  width: 200%;
+}
+
+#s-image20{
+  position: absolute;
+  top: 130px;
+  left: 320px;
+  width: 250%;
+}
+
+#s-image67{
+  position: absolute;
+  top: 90px;
+  left: 290px;
+  width: 230%;
+}
+
+/* -------------------- */
